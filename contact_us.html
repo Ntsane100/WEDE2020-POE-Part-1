@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css_styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body class="body2">
+        <header class="controlheader">
+            <div class="leftheader">
+                <img src="_images/PURPLE.png" alt="" width="100" class="logo">
+                <h1 class="name">Purple Beauty Salon</h1>    
+            </div>
+            <nav class="navheader">
+              <ul class="navlink">
+                <li><a href="homepage.html">Homepage</a></li>
+                  <li><a href="about_us.html">About Us</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="contact_us.html">Contact Us</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+
+              </ul>  
+          </nav>   
+    </header>
+    
+        
+          <div class="contact">
+              <h1>Contact Purple Beauty Salon</h1>
+              <p>We would love to hear from you! Please fill in the form below.</p>
+          </div>
+      
+    
+        <section class="contact-form">
+             <form id="contactForm" onsubmit="showConfirmation(event)">
+          <form action="#" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+    
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+      </div>
+   
+        <div class="map">
+            <h2>Come vist us at:</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.332463722067!2d27.778891775485487!3d-26.08806387714828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e959982f401beab%3A0xbd7488b281b3a740!2sKey%20West%20Shopping%20Centre!5e0!3m2!1sen!2sie!4v1743985482286!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+          <section class="working-hours">
+            <h3>🕒 Working Hours</h3>
+            <div class="hours">
+              <p><strong>Mon – Fri:</strong> 09h00 – 19h00</p>
+              <p><strong>Sat – Sun:</strong> 09h00 – 18h00</p>
+            </div>
+          </section>
+    
+        <div class="loc">
+            <p><strong>You will find us at Keywest Mall, Krugersdorp, JHB</strong></p>
+            <p><strong>or Call 011 576 3998</strong></p>
+        </div>
+        <script>
+            // JavaScript to show confirmation on form submit
+            function showConfirmation(event) {
+              event.preventDefault(); // prevent actual form submission
+              alert("Thank you for contacting Purple Beauty Salon! We will get back to you shortly.");
+              document.getElementById("contactForm").reset(); // reset the form
+            }
+          </script>
+        
+    
+    
+</body>
+<footer class="footer">
+    <p>&copy;2025 Purple Beauty Salon. All Rights Reserved</p>  
+</footer>
+
+</html>

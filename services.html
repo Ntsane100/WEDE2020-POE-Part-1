@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css_styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+</head>
+<body class="body1">
+  <header class="controlheader">
+    <div class="leftheader">
+        <img src="_images/PURPLE.png" alt="" width="100" class="logo">
+        <h1 class="name">Purple Beauty Salon</h1>    
+    </div>
+    <nav class="navheader">
+      <ul class="navlink">
+        <li><a href="homepage.html">Homepage</a></li>
+        <li><a href="services.html">Services</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+      </ul>  
+  </nav>   
+    </header>
+    <div class="Z">
+      <h1>Our Services</h1>
+      <p><strong>Select one of our signature beauty services below.</strong></p>
+    </div>
+    <section class="services-grid">
+      <div class="service-box" onclick="toggleDetails('hair')">
+        <img src="_images/hairr.png" alt="Hair Service" />
+        <div class="overlay">Hair</div>
+      
+      </div>
+     
+  
+      <div class="service-box" onclick="toggleDetails('nails')">
+        <img src="_images/download 2(20).png" alt="Nail Service" />
+        <div class="overlay">Nails</div>
+      
+      </div>
+  
+      <div class="service-box" onclick="toggleDetails('facial')">
+        <img src="_images/face.png" alt="Facial Service" />
+        <div class="overlay">Facial</div>
+       
+      </div>
+  
+      <div class="service-box" onclick="toggleDetails('coloring')">
+        <img src="_images/haircolor.png" alt="Hair Coloring Service" />
+        <div class="overlay">Hair Coloring</div>
+        
+      </div>
+    </section>
+    <div class="book-now-container">
+      <button class="book-now-btn" onclick="location.href='booking.html'">Book Now</button>
+    </div>
+  
+    <!-- Service Details -->
+    <div id="hair" class="service-details">
+      <h3>Hairstyles</h3>
+      <ul>
+        <li>Buzz Cut <span class="price">R80</span></li>
+        <li>Fade Cut <span class="price">R100</span></li>
+        <li>Cornrows (Men) <span class="price">R120</span></li>
+        <li>Dreadlock Twist (Men) <span class="price">R200</span></li>
+        <li>Short Back and Sides <span class="price">R90</span></li>
+        <li>Ponytail Braids (Women) <span class="price">R150</span></li>
+        <li>Bob Cut <span class="price">R130</span></li>
+        <li>Silk Press <span class="price">R200</span></li>
+        <li>Wig Installation <span class="price">R250</span></li>
+        <li>Box Braids (Women) <span class="price">R300</span></li>
+      </ul>
+    </div>
+  
+    <div id="nails" class="service-details">
+      <h3>Nail Services</h3>
+      <ul>
+        <li>Manicure (Women) <span class="price">R100</span></li>
+        <li>Pedicure (Women) <span class="price">R120</span></li>
+        <li>Manicure (Men) <span class="price">R90</span></li>
+        <li>Pedicure (Men) <span class="price">R110</span></li>
+      </ul>
+    </div>
+  
+    <div id="facial" class="service-details">
+      <h3>Facial Treatments</h3>
+      <ul>
+        <li>Deep Cleansing Facial <span class="price">R180</span></li>
+        <li>Hydrating Facial <span class="price">R200</span></li>
+        <li>Anti-Aging Facial <span class="price">R250</span></li>
+      </ul>
+    </div>
+  
+    <div id="coloring" class="service-details">
+      <h3>Hair Coloring Options</h3>
+      <ul>
+        <li>Black Dye <span class="price">R100</span></li>
+        <li>Brown Chocolate <span class="price">R120</span></li>
+        <li>Blonde Highlights <span class="price">R180</span></li>
+        <li>Platinum Blonde <span class="price">R200</span></li>
+        <li>Ginger Red <span class="price">R150</span></li>
+        <li>Caramel Ombre <span class="price">R170</span></li>
+        <li>Two-Tone Coloring <span class="price">R190</span></li>
+        <li>Vibrant Pink <span class="price">R160</span></li>
+        <li>Ocean Blue <span class="price">R160</span></li>
+        <li>Custom Color Blend <span class="price">R250</span></li>
+      </ul>
+    </div>
+    <section class="why-choose">
+      <h2>Why Choose Purple Beauty Salon?</h2>
+      <ul class="reasons-list">
+        <li><strong>🌟 Professional & Friendly Staff:</strong> Our team is trained, experienced, and always ready to give you the best service with a smile.</li>
+        <li><strong>✨ High-Quality Products:</strong> We use only premium, salon-grade products to ensure outstanding results every time.</li>
+        <li><strong>🕒 Convenient Online Booking:</strong> Easily book your favorite service from the comfort of your phone or laptop.</li>
+        <li><strong>💅 Wide Range of Services:</strong> From hair to nails to skincare, we’ve got all your beauty needs covered under one roof.</li>
+        <li><strong>❤️ Comfortable & Relaxing Environment:</strong> Enjoy a calm, clean, and stylish space that makes every visit a treat.</li>
+      </ul>
+    </section>
+    <section class="working-hours">
+      <h3>🕒 Working Hours</h3>
+      <div class="hours">
+        <p><strong>Mon – Fri:</strong> 09h00 – 19h00</p>
+        <p><strong>Sat – Sun:</strong> 09h00 – 18h00</p>
+      </div>
+    </section>
+    
+  
+    <script>
+      function toggleDetails(id) {
+        document.querySelectorAll('.service-details').forEach(section => {
+          section.style.display = section.id === id ? 'block' : 'none';
+        });
+      }
+    </script>
+     <footer class="footer">
+      <p>&copy;2025 Purple Beauty Salon. All Rights Reserved</p>  
+  </footer>
+</body>
+
+
+    
+</html>

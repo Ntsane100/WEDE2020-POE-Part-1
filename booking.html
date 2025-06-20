@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="css_styles/styles.css">
+</head>
+<body class="AA">
+    <div class="container">
+        <div class="logo-container">
+            <img src="_images/PURPLE.png" alt="Purple Beauty Salon Logo" class="logo" />
+          </div>
+        <h2>Book an Appointment</h2>
+    <label for="service">Choose Service:</label>
+    <select id="service" required onchange="updatePrice()">
+      <option value="">-- Select a Service --</option>
+    
+      <!-- Hair Services -->
+      <optgroup label="Hair Services">
+        <option value="Buzz Cut" data-price="80">Buzz Cut – R80</option>
+        <option value="Fade Cut" data-price="100">Fade Cut – R100</option>
+        <option value="Cornrows (Men)" data-price="120">Cornrows (Men) – R120</option>
+        <option value="Dreadlock Twist (Men)" data-price="200">Dreadlock Twist (Men) – R200</option>
+        <option value="Short Back and Sides" data-price="90">Short Back and Sides – R90</option>
+        <option value="Ponytail Braids (Women)" data-price="150">Ponytail Braids (Women) – R150</option>
+        <option value="Bob Cut" data-price="130">Bob Cut – R130</option>
+        <option value="Silk Press" data-price="200">Silk Press – R200</option>
+        <option value="Wig Installation" data-price="250">Wig Installation – R250</option>
+        <option value="Box Braids (Women)" data-price="300">Box Braids (Women) – R300</option>
+      </optgroup>
+    
+      <!-- Nail Services -->
+      <optgroup label="Nail Services">
+        <option value="Manicure (Women)" data-price="100">Manicure (Women) – R100</option>
+        <option value="Pedicure (Women)" data-price="120">Pedicure (Women) – R120</option>
+        <option value="Manicure (Men)" data-price="90">Manicure (Men) – R90</option>
+        <option value="Pedicure (Men)" data-price="110">Pedicure (Men) – R110</option>
+      </optgroup>
+    
+      <!-- Facial Services -->
+      <optgroup label="Facial Services">
+        <option value="Deep Cleansing Facial" data-price="180">Deep Cleansing Facial – R180</option>
+        <option value="Hydrating Facial" data-price="200">Hydrating Facial – R200</option>
+        <option value="Anti-Aging Facial" data-price="250">Anti-Aging Facial – R250</option>
+      </optgroup>
+    
+      <!-- Hair Coloring -->
+      <optgroup label="Hair Coloring">
+        <option value="Black Dye" data-price="100">Black Dye – R100</option>
+        <option value="Brown Chocolate" data-price="120">Brown Chocolate – R120</option>
+        <option value="Blonde Highlights" data-price="180">Blonde Highlights – R180</option>
+        <option value="Platinum Blonde" data-price="200">Platinum Blonde – R200</option>
+        <option value="Ginger Red" data-price="150">Ginger Red – R150</option>
+        <option value="Caramel Ombre" data-price="170">Caramel Ombre – R170</option>
+        <option value="Two-Tone Coloring" data-price="190">Two-Tone Coloring – R190</option>
+        <option value="Vibrant Pink" data-price="160">Vibrant Pink – R160</option>
+        <option value="Ocean Blue" data-price="160">Ocean Blue – R160</option>
+        <option value="Custom Color Blend" data-price="250">Custom Color Blend – R250</option>
+      </optgroup>
+    </select>
+    
+     <!-- Date & Time -->
+     <label for="day">Choose Day:</label>
+     <input type="date" id="day" required>
+
+     <label for="time">Choose Time:</label>
+     <input type="time" id="time" required>
+
+     <!-- Total Price -->
+     <div class="total" id="total">Total Price: R0</div>
+
+     <!-- Submit Button -->
+     <button type="submit">Confirm Booking</button>
+   </form>
+ </div>
+ <div id="popup" class="popup-overlay">
+    <div class="popup-content">
+      <p>✅ Check your email for your ticket.<br>Thank you for your support!</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function updatePrice() {
+      const serviceSelect = document.getElementById('service');
+      const selectedOption = serviceSelect.options[serviceSelect.selectedIndex];
+      const price = selectedOption.getAttribute('data-price') || 0;
+      document.getElementById('total').textContent = `Total Price: R${price}`;
+    }
+  
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('popup').style.display = 'flex';
+    });
+  
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+    
+</body>
+</html>
